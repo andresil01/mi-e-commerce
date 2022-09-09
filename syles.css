@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clothes-img img {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.container-principal {
+    max-width: 1024px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.content-clothes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 30px ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: brown;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navbar-title {
+    margin-bottom: 1rem;
+    align-items: center;
+    color: beige;
+}
+
+.bx-cart {
+    display: flex;
+    color: beige;
+    align-items: center;
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+    
+    cursor: pointer;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+}
+
+.clothes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: box-shadow 0.5s;
+}
+
+.clothes:hover {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.500);
+}
+
+.content-cart {
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    padding: 4rem 1rem 1rem 1rem;
+}
+
+.content-cart-show {
+    transform: translateX(0);
+}
+
+.content-cart-body {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: scroll ;
+}
+
+.content-cart-total {
+    height: 10%;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.item-cart-img img {
+    width: 53%;
+}
+
+.item-cart {
+    background-color: white;
+    padding:0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.20);
+}
+
+.item-cart-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bx-minus {
+    cursor: pointer;
+}
+
+.bx-plus {
+    cursor: pointer;
+}
+
+.bx-trash {
+    cursor: pointer;
+}
+
+.btn-buy {
+    width: 60%;
+    height: 20px;
+    background-color: rgba(26, 24, 24, 0.726);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.5s ;
+}
+
+.btn-buy:hover{
+    background-color: black;
+}
+
+.btn-buy span {
+    font-size: 0.8rem;
+    color: rgb(252, 252, 252);
+    
+}
+
+
+.box-portafolio {
+  width: 90%;
+  height: 60%;
+}
+
+.ContainerCenter{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor para centrar */
+.ContainerCenter{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  /* Input */
+  input{display: none}
+  
+  /* Slider */
+  .Carrusels{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .Carrusel{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    transition: all .5s ease;
+  }
+  /* Configuracion de elementos individuales */
+  .Carrusels .Carrusel:nth-child(1) {background-image: url(https://cdn.sanity.io/images/c1chvb1i/production/f0380562d8a133f9ee4ff92e8f6f0039558bc1ab-640x426.jpg);}
+  .Carrusels .Carrusel:nth-child(2) {background-image: url(https://i0.wp.com/www.footfire.co.uk/wp-content/uploads/2020/05/air-jordan-6-dmp-ct4954-007-restock.jpg?fit=1280%2C720&ssl=1);}
+  .Carrusels .Carrusel:nth-child(3) {background-image: url(https://www.gigantes.com/wp-content/uploads/2020/07/EddlYCqXYAILa8o.jpg);}
+  /* Estado 1 */
+  #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+  #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+  #Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+  /* Estado 2 */
+  #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+  #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+  #Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+  /* Estado 3 */
+  #Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+  #Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-100%, 0);}
+  #Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+  
+  /* Flechas */
+  .Carrusels .ArrowLeft, .Carrusels .ArrowRight{
+    position: absolute;
+    height: 100%;
+    width: 2em;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    user-select: none; 
+  }
+  .Carrusels .ArrowLeft{left: 0px;}
+  .Carrusels .ArrowRight{right: 0px;}
+  /* Configuracion de flechas individuales */
+  #Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
+  #Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
+  #Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
+  
+@media (min-width:700px) {
+    .content-cart {
+        width: 30vw;
+        height: 100vh;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        border-bottom-left-radius: 1rem;
+        border-top-left-radius: 1rem;
+        padding: 4rem 2rem 2rem 2rem;
+    }
+    
+    .content-cart-show {
+        transform: translateX(0);
+    }
+    
+   /* Slider */
+.Carrusels{
+    height: 600px;
+    width: 1000px;
+    position: relative;
+    
+  }
+}

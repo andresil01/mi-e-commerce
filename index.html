@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="syles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+      
+    <div class="container-principal">
+       <nav class="navbar">
+          <h2 class="navbar-title">JORDAN AIR STORE</h2>
+          <i class='bx bx-cart' id="icon-cart"></i> 
+       </nav>
+
+       <section class="box-portfolio" id="portfolio">
+            
+        <div class="ContainerCenter">
+          <input type="radio" name="Carrusel" id="Slider1" checked>
+          <input type="radio" name="Carrusel" id="Slider2">
+          <input type="radio" name="Carrusel" id="Slider3">
+          
+          <div class="Carrusels">
+            <div class="Carrusel"></div> 
+            <div class="Carrusel"></div>
+            <div class="Carrusel"></div>
+            
+            <label for="Slider3" class="ArrowLeft Arrow1"><p>❮</p></label>
+            <label for="Slider1" class="ArrowLeft Arrow2"><p>❮</p></label>
+            <label for="Slider2" class="ArrowLeft Arrow3"><p>❮</p></label>
+          
+            <label for="Slider2" class="ArrowRight Arrow1"><p>❯</p></label> 
+            <label for="Slider3" class="ArrowRight Arrow2"><p>❯</p></label>
+            <label for="Slider1" class="ArrowRight Arrow3"><p>❯</p></label>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="content-clothes"></section>
+    </div>
+    
+    <div class="content-cart" id="content-cart">
+        <div class="content-cart-body">
+          
+        </div>
+
+        <div class="content-cart-total">
+            <h3>total:<span id="total">0</span></h3>
+            <button class="btn-buy">BUY</button>
+        </div>
+        
+    </div>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
